@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Secret place</title>
+
+  <style>
+    html,body,#pano { height: 100%; margin: 0; }
+    #pano { width: 100%; }
+  </style>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+  <script>
+    function init() {
+      pannellum.viewer('pano', {
+        type: 'equirectangular',
+        panorama: 'roof_panorama.jpg',
+        autoLoad: true,
+        showControls: true,
+      });
+    }
+  </script>
+</head>
+
+<body onload="init()">
+  <div id="pano"></div>
+</body>
+</html>
